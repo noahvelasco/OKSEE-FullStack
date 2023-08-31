@@ -9,7 +9,6 @@ OKSee is a modern and simple full stack web app showcasing the best parts of Okl
 <a href="https://reactnative.dev/docs/getting-started?guide=android" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="react"  height="40"/></a>
 <a href="https://nextjs.org" target="_blank" rel="noreferrer"><img src="https://upload.vectorlogo.zone/logos/nextjs/images/60eff509-53dd-4280-92e7-7318fa02e934.svg" alt="nextjs"  width="60"/></a>
 <a href="https://spring.io" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="java spring boot"  height="50"/></a>
-
 <a href="https://www.google.com/maps" target="_blank" rel="noreferrer"> 
 <img src="https://www.vectorlogo.zone/logos/google_maps/google_maps-icon.svg" alt="googlemaps"  height="40"/></a>
 <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer"> <img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="openweather"  height="40"/></a>
