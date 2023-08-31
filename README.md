@@ -1,13 +1,13 @@
-# OKSEE-FullStack
+<p align="center">
+<img src="./images/logo_land.png" alt="Alternative text" title="App Splash Logo" height="250"/>
+</p>
 
-A fullstack application showing the best places in Oklahoma City, Oklahoma.
+OKSee is a modern and simple full stack web app showcasing the best parts of Oklahoma City, Oklahoma. The main staple of this mobile app is the modern, sleek, and simple UI/UX. All images, color-schemes, and software engineering was done and maintained by Noah Velasco.
 
 <h3 align="center">Technologies Used</h3>
 <p align="center">
 <a href="https://reactnative.dev/docs/getting-started?guide=android" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="react"  height="40"/></a>
-<a href="https://nextjs.org" target="_blank" rel="noreferrer"><img src="https://upload.vectorlogo.zone/logos/nextjs/images/60eff509-53dd-4280-92e7-7318fa02e934.svg" alt="nextjs"  height="50"/></a>
-<a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="nextjs"  height="40"/></a>
-<a href="https://www.google.com/maps" target="_blank" rel="noreferrer"> 
+<a href="https://nextjs.org" target="_blank" rel="noreferrer"><img src="https://upload.vectorlogo.zone/logos/nextjs/images/60eff509-53dd-4280-92e7-7318fa02e934.svg" alt="nextjs"  width="60"/></a><a href="https://www.google.com/maps" target="_blank" rel="noreferrer"> 
 <img src="https://www.vectorlogo.zone/logos/google_maps/google_maps-icon.svg" alt="googlemaps"  height="40"/></a>
 <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer"> <img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="openweather"  height="40"/></a>
 
@@ -50,8 +50,7 @@ TBA
 - [ ] Documentation
 
 ---
-
-## Running the application
+### Running the application
 Prerequisites
 * Java 20 installed and configured
 * NodeJS installed
@@ -59,14 +58,14 @@ Prerequisites
 
 Then you need to open two terminals: terminal `A` and terminal `B`
 
-### Starting backend on terminal A
+#### Starting backend on terminal A
 
 ```
 $ ./OKSEE-FullStack/backend
 ./mvnw spring-boot:run
 ```
 
-### Starting frontend terminal B
+#### Starting frontend terminal B
 
 ```
 $ ./OKSEE-FullStack/frontend
