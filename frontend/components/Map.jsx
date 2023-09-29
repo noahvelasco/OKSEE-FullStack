@@ -1,12 +1,13 @@
 "use client";
+import Image from "next/image";
 
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import React from "react";
 
 const Map = () => {
   //custom map style
   const mapContainerStyle = {
-    width: "100vw",
+    width: "80vw",
     height: "100vh",
   }
   const startingCoord = {lat: 35.4676 , lng: -97.5164}
@@ -14,22 +15,31 @@ const Map = () => {
     <div>
       <LoadScript
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
-        mapIds={['2c19ea471d766e59']}//this is for the map styling
+        mapIds={['2c19ea471d766e59']}//this is for the map styling - must get from google map style management
       >
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={startingCoord}
           zoom={13}
           options={{
-            mapId: '2c19ea471d766e59',//this is for the map styling
+            mapId: '2c19ea471d766e59',//this is for the map styling - must get from google map style management
             disableDefaultUI: true,
-            clickableIcons: false,
+            clickableIcons: true,
             scrollwheel: true,
           }} 
         >
-
-          <Marker>
-          </Marker>
+          <Marker
+            position={startingCoord}
+            label={"Label"}
+            title="Title"
+            icon={{
+              url: '/assets/images/marker.png',
+              scaledSize:{
+                width:50,
+                height:50
+              },
+            }}
+          />
         </GoogleMap>
       </LoadScript>
     </div>
