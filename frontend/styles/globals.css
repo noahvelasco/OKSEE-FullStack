@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 .map-buttons {
-  @apply flex flex-col space-y-2 absolute top-4 left-4 z-10;
+  @apply flex flex-col space-y-10 ml-8 my-72 absolute z-10;
 }
 
 .button {
-  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-white px-4 py-2 rounded;
+  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-white px-4 py-2 hover:bg-[#C0A080] rounded-lg;
 }

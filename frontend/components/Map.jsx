@@ -7,7 +7,7 @@ import React from "react";
 const Map = () => {
   //custom map style
   const mapContainerStyle = {
-    width: "80vw",
+    width: "70vw",
     height: "100vh",
   }
   const startingCoord = {lat: 35.4676 , lng: -97.5164}
