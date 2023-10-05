@@ -7,7 +7,7 @@ const Home = () => {
   return ( 
     <div className="flex flex-row">
 
-      <div className="flex-1 bg-[#171717]">
+      <div className="flex-1 bg-[#171717] bg-[url('/assets/icons/splash.png')] bg-no-repeat bg-contain	bg-center">
         <NavBar />
       </div>
       
