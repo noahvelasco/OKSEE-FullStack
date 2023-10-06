@@ -4,7 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.map-overlay {
+.map-weather-loading-overlay {
+  @apply flex flex-col items-center ml-8 my-16 p-5 absolute z-10 bg-[#171717] border-2 border-[#C0A080] text-[#FFFFFF] rounded-full;
+}
+
+.map-weather-overlay {
   @apply flex flex-row space-x-4 items-center ml-8 my-16 p-3 absolute z-10 bg-[#171717] border-2 border-[#C0A080] text-[#FFFFFF] rounded-3xl;
 }
 
