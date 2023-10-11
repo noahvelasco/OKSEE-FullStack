@@ -57,7 +57,7 @@ Prerequisites
 * Java 20 installed and configured
 * NodeJS installed
 
-
+<!-- 
 Then you need to open two terminals: terminal `A` and terminal `B`
 
 #### Starting backend on terminal A
@@ -72,8 +72,18 @@ $ ./OKSEE-FullStack/backend
 ```
 $ ./OKSEE-FullStack/frontend
 npm run dev
+``` -->
+1. Run `start.sh` script (initializes the backend and frontend)
+```
+$ ./OKSEE-FullStack
+./start.sh
 ```
 
+2. Open a new browser window and go to http://localhost:3000
+
+3. *(OPTIONAL)* View Backend Data - Open a new browser and go to http://localhost:8080/api/est
+
+3. *(OPTIONAL)* View Backend H2 Database - Open a new browser and go to http://localhost:8080/h2-console and click 'connect'  - **NO PASSWORD NECESSARY**
 
 
 ### Terminating the backend
@@ -82,3 +92,11 @@ npm run dev
     1. Run `jps` in any terminal
     2. Locate process ID (e.g `<PID> OkseeWebApplication`)
     3. Terminate process `kill <PID>`
+
+
+<!-- 
+TODO
+* Fetching all location Data from backend
+* Listing all data onto nav bar
+* Button Overlay Logic
+* update readme on starting up app - ./start.sh then open localhost://3000 front and localhost://8080/api/est for backend -->
