@@ -1,11 +1,38 @@
 "use client"
 
-const MapFilterButtons = () => {
+const MapFilterButtons = ({
+  pressedPizza,
+  setPizza,
+  pressedBurger,
+  setBurger,
+  pressedCoffee,
+  setCoffee
+}) => {
+
+
 return (
-<div className="map-buttons">
-  <button className="button" onClick={()=>{console.log("Pizza")}}>△ Pizza</button>
-  <button className="button" onClick={()=>{console.log("Burger")}}>≡ Burger</button>
-  <button className="button" onClick={() => { console.log("Cafe") }}>◎ Cafe</button>
+  <div className="map-buttons">
+    
+    <button className={pressedPizza ? "button-pressed" : "button-unpressed"} onClick={
+      () => {
+      setPizza((prevState) => !prevState);
+      }
+    }>△ Pizza</button>
+
+    <button className={pressedBurger ? "button-pressed" : "button-unpressed"} onClick={
+      () => {
+        setBurger((prevState) => !prevState);
+      }
+    }>≡ Burger</button>
+    
+
+    <button className={pressedCoffee ? "button-pressed" : "button-unpressed"} onClick={
+      () => {
+        setCoffee((prevState) => !prevState);
+      }
+    }>◎ Cafe</button>
+    
+
 </div>
 );
 };
