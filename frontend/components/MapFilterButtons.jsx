@@ -13,20 +13,20 @@ const MapFilterButtons = ({
 return (
   <div className="map-buttons">
     
-    <button className={pressedPizza ? "button-pressed" : "button-unpressed"} onClick={
+    <button className={pressedPizza ? "button-pressed-pizza" : "button-unpressed"} onClick={
       () => {
       setPizza((prevState) => !prevState);
       }
     }>△ Pizza</button>
 
-    <button className={pressedBurger ? "button-pressed" : "button-unpressed"} onClick={
+    <button className={pressedBurger ? "button-pressed-burger" : "button-unpressed"} onClick={
       () => {
         setBurger((prevState) => !prevState);
       }
     }>≡ Burger</button>
     
 
-    <button className={pressedCoffee ? "button-pressed" : "button-unpressed"} onClick={
+    <button className={pressedCoffee ? "button-pressed-coffee" : "button-unpressed"} onClick={
       () => {
         setCoffee((prevState) => !prevState);
       }

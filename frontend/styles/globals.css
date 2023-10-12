@@ -17,9 +17,17 @@
 }
 
 .button-unpressed {
-  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-white px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-[#6D6D6D] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
 }
 
-.button-pressed {
-  @apply bg-[#C0A080] border-solid border-2 border-[#C0A080] text-white px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+.button-pressed-pizza {
+  @apply bg-[#171717] border-solid border-4 border-[#FFFACD] text-[#FFFACD] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+}
+
+.button-pressed-burger {
+  @apply bg-[#171717] border-solid border-4 border-[#D2691E] text-[#D2691E] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+}
+
+.button-pressed-coffee {
+  @apply bg-[#171717] border-solid border-4 border-[#EEA977] text-[#EEA977] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
 }

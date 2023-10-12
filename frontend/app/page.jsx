@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Map from "@/components/Map"
 import MapFilterButtons from "@/components/MapFilterButtons"
@@ -9,9 +9,35 @@ import WeatherOverlay from "@/components/WeatherOverlay"
 
 const Home = () => {
   
-  const [pressedPizza, setPizza] = useState(false);
-  const [pressedBurger, setBurger] = useState(false);
-  const [pressedCoffee, setCoffee] = useState(false);
+  const [pressedPizza, setPizza] = useState(true);
+  const [pressedBurger, setBurger] = useState(true);
+  const [pressedCoffee, setCoffee] = useState(true);
+  const [locations, setLocations] = useState([])
+
+  
+  const fetchLocations = async () => {
+    try {
+      //Get the location data from the backend
+      const res = await fetch('http://localhost:8080/api/est');
+      const data = await res.json();
+      setLocations(data);
+    } catch (e) {
+      setError("Could not fetch location data for eateries!");
+    } finally {
+      console.log("fetched successfully!!!")
+    }
+  }
+
+  useEffect(() => { 
+    (async () => {
+      await fetchLocations();
+    })();
+  }, [])
+
+
+
+
+
 
   return ( 
     <div className="flex flex-row">
@@ -30,7 +56,13 @@ const Home = () => {
           pressedCoffee={ pressedCoffee}
           setCoffee={setCoffee}
         />
-        <Map />
+        
+        <Map
+          locations={locations}
+          pressedPizza={pressedPizza}
+          pressedBurger={pressedBurger}
+          pressedCoffee={ pressedCoffee}
+        />
       </div>
     </div>
 

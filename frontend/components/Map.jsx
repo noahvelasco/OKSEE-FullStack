@@ -1,16 +1,84 @@
 "use client";
-import Image from "next/image";
 
 import { GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
-import React from "react";
+import { useState, useEffect} from "react";
 
-const Map = () => {
-  //custom map style
-  const mapContainerStyle = {
-    width: "70vw",
-    height: "100vh",
-  }
-  const startingCoord = {lat: 35.4676 , lng: -97.5164}
+const Map = ({
+  locations,
+  pressedPizza,
+  pressedBurger,
+  pressedCoffee
+}) => {
+
+  const okcCoord = {lat: 35.4676 , lng: -97.5164} //this is the default view for initial map rendering
+
+  const showMarkers = () => {
+    //map the locations at render/rerender
+    return locations.map((item, index) => {
+
+      //if pizza button pressed then show its markers
+      if (pressedPizza && item.category == "pizza") {
+        return (
+
+          <Marker
+            key={item.id}
+            index={index}
+            position={{ lat: item.latitude, lng: item.longitude}}
+            // label={"Label"}
+            title="Title"
+            icon={{
+              url: '/assets/images/marker_pizza.png',
+              scaledSize:{
+                width:50,
+                height:50
+              },
+            }}
+          />
+        );
+      }
+      if (pressedBurger && item.category == "burger") {
+        return (
+          <Marker
+            key={item.id}
+            index={index}
+            position={{ lat: item.latitude, lng: item.longitude}}
+            // label={"Label"}
+            title="Title"
+            icon={{
+              url: '/assets/images/marker_burger.png',
+              scaledSize:{
+                width:50,
+                height:50
+              },
+            }}
+          />
+
+        );
+      }
+      if (pressedCoffee && item.category == "coffee") {
+        return (
+          <Marker
+            key={item.id}
+            index={index}
+            position={{ lat: item.latitude, lng: item.longitude}}
+            // label={"Label"}
+            title="Title"
+            icon={{
+              url: '/assets/images/marker_coffee.png',
+              scaledSize:{
+                width:50,
+                height:50
+              },
+            }}
+          />
+
+        );
+      }
+    });
+  };
+
+
+
   return (
     <div>
       <LoadScript
@@ -18,8 +86,11 @@ const Map = () => {
         mapIds={['2c19ea471d766e59']}//this is for the map styling - must get from google map style management
       >
         <GoogleMap
-          mapContainerStyle={mapContainerStyle}
-          center={startingCoord}
+          mapContainerStyle={{
+            width: "70vw",
+            height: "100vh",
+          }}
+          center={okcCoord}
           zoom={13}
           options={{
             mapId: '2c19ea471d766e59',//this is for the map styling - must get from google map style management
@@ -28,18 +99,8 @@ const Map = () => {
             scrollwheel: true,
           }} 
         >
-          <Marker
-            position={startingCoord}
-            label={"Label"}
-            title="Title"
-            icon={{
-              url: '/assets/images/marker.png',
-              scaledSize:{
-                width:50,
-                height:50
-              },
-            }}
-          />
+          {/* Show all the markers based on the states of the buttons */}
+          {showMarkers()}
         </GoogleMap>
       </LoadScript>
     </div>
