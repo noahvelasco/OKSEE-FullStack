@@ -1,9 +1,17 @@
+"use client"
+
+import { useState } from "react"
+
 import Map from "@/components/Map"
 import MapFilterButtons from "@/components/MapFilterButtons"
 import NavBar from "@/components/NavBar"
 import WeatherOverlay from "@/components/WeatherOverlay"
 
 const Home = () => {
+  
+  const [pressedPizza, setPizza] = useState(false);
+  const [pressedBurger, setBurger] = useState(false);
+  const [pressedCoffee, setCoffee] = useState(false);
 
   return ( 
     <div className="flex flex-row">
@@ -14,7 +22,14 @@ const Home = () => {
     
       <div className="flex-1">  
         <WeatherOverlay />
-        <MapFilterButtons />
+        <MapFilterButtons
+          pressedPizza={pressedPizza}
+          setPizza={ setPizza}
+          pressedBurger={pressedBurger }
+          setBurger={ setBurger}
+          pressedCoffee={ pressedCoffee}
+          setCoffee={setCoffee}
+        />
         <Map />
       </div>
     </div>

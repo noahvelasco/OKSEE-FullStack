@@ -16,6 +16,10 @@
   @apply flex flex-col space-y-10 ml-8 my-72 absolute z-10;
 }
 
-.button {
+.button-unpressed {
   @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-white px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+}
+
+.button-pressed {
+  @apply bg-[#C0A080] border-solid border-2 border-[#C0A080] text-white px-4 py-2 hover:bg-[#C0A080] rounded-lg;
 }
