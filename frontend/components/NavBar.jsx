@@ -1,24 +1,35 @@
 'use client'
 
+import { useEffect, useState } from 'react';
+
 import SearchBar from "./SearchBar"
-
-import React, { useEffect, useState } from 'react';
-
-
-const NavBar = () => {
+import LocationList from './LocationList';
 
 
-  //   const [allLocations, setAllLocations] = useState([])
+const NavBar = ({
+  locations,
+  pressedPizza,
+  pressedBurger,
+  pressedCoffee
+}) => {
 
-
-  // const useEffect(() => {
-    
-  // }, [])
+  const [searchValue, onChangeText] = useState(""); //used when user is using searchbar along with the other button filters
 
   return (
-      <div className=" grid justify-items-center">
+      <div className="flex flex-col max-h-screen items-center">
           <h1 className='font-sans text-3xl text-[#C0A080] pt-2 font-normal'>Establishments</h1>
-          <SearchBar />
+        <SearchBar
+          searchValue = {searchValue}
+          onChangeText = {onChangeText}
+        />
+      
+      <LocationList
+        locations={locations}
+        searchValue={searchValue}
+        pressedPizza={pressedPizza}
+        pressedBurger={pressedBurger}
+        pressedCoffee={pressedCoffee}
+      />
     </div>
   )
 }

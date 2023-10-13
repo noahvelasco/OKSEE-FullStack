@@ -2,7 +2,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const SearchBar = () => {
+const SearchBar = ({
+  searchValue,
+  onChangeText
+}) => {
   return (
     <form className='mt-10 text-white mx-2 relative'>
       <input

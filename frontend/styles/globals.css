@@ -31,3 +31,31 @@
 .button-pressed-coffee {
   @apply bg-[#171717] border-solid border-4 border-[#EEA977] text-[#EEA977] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
 }
+
+.location-list {
+  @apply space-y-10 relative my-5 w-4/5 overflow-y-auto;
+}
+
+.location-item {
+  @apply flex flex-col p-5 bg-[#444444]/[.95] border-4 border-[#C0A080] rounded rounded-xl;
+}
+
+.location-title-section {
+  @apply flex flex-row justify-between;
+}
+
+.location-title {
+  @apply text-white;
+}
+
+.location-category {
+  @apply text-[#7E7E7E];
+}
+
+.bird-view-button {
+  @apply bg-[#C0A080] mt-5 px-5 py-2 text-white justify-between rounded rounded-full;
+}
+
+.bird-view-text {
+  @apply text-white;
+}
