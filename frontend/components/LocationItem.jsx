@@ -24,7 +24,7 @@ const LocationItem = ({
   return (
       <div className='location-item'>
           <Image
-              className='self-center rounded'
+              className='self-center rounded w-3/4 h-auto'
                 src={thumbnail}
                 width={200}
                 height={200}
@@ -57,13 +57,13 @@ const LocationItem = ({
 
         <button
         className='bird-view-button'
-        onPress={() => {
-            setModalVisible(true);
-            setSelectedLocName(title);
-            setSelectedLocCoords([lat, lng]);
-            setSelectedLocRating(rating);
-            setSelectedLocAdress(address);
-        }}
+        // onPress={() => {
+        //     setModalVisible(true);
+        //     setSelectedLocName(title);
+        //     setSelectedLocCoords([lat, lng]);
+        //     setSelectedLocRating(rating);
+        //     setSelectedLocAdress(address);
+        // }}
         >
             <h1 className='bird-view-text'>
                 {"Bird's \t"}

@@ -13,14 +13,14 @@ const NavBar = ({
   pressedCoffee
 }) => {
 
-  const [searchValue, onChangeText] = useState(""); //used when user is using searchbar along with the other button filters
+  const [searchValue, setSearchValue] = useState(""); //used when user is using searchbar along with the other button filters
 
   return (
       <div className="flex flex-col max-h-screen items-center">
-          <h1 className='font-sans text-3xl text-[#C0A080] pt-2 font-normal'>Establishments</h1>
+        <h1 className='font-sans text-3xl text-[#C0A080] pt-2 font-normal'>Establishments</h1>
         <SearchBar
           searchValue = {searchValue}
-          onChangeText = {onChangeText}
+          setSearchValue = {setSearchValue}
         />
       
       <LocationList

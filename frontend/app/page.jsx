@@ -51,8 +51,8 @@ const Home = () => {
         <WeatherOverlay />
         <MapFilterButtons
           pressedPizza={pressedPizza}
-          setPizza={ setPizza}
-          pressedBurger={pressedBurger }
+          setPizza={setPizza}
+          pressedBurger={pressedBurger}
           setBurger={ setBurger}
           pressedCoffee={ pressedCoffee}
           setCoffee={setCoffee}

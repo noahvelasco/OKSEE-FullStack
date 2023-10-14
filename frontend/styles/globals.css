@@ -17,23 +17,23 @@
 }
 
 .button-unpressed {
-  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-[#6D6D6D] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+  @apply bg-[#171717] border-solid border-2 border-[#C0A080] text-[#6D6D6D] px-4 py-2 hover:bg-[#C0A080] hover:text-white rounded-full drop-shadow-2xl;
 }
 
 .button-pressed-pizza {
-  @apply bg-[#171717] border-solid border-4 border-[#FFFACD] text-[#FFFACD] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+  @apply bg-[#C0A080] border-solid border-4 border-[#FFFACD] text-white px-4 py-2 hover:bg-[#9C715F] rounded-full drop-shadow-2xl;
 }
 
 .button-pressed-burger {
-  @apply bg-[#171717] border-solid border-4 border-[#D2691E] text-[#D2691E] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+  @apply bg-[#C0A080] border-solid border-4 border-[#D2691E] text-white px-4 py-2 hover:bg-[#9C715F] rounded-full drop-shadow-2xl;
 }
 
 .button-pressed-coffee {
-  @apply bg-[#171717] border-solid border-4 border-[#EEA977] text-[#EEA977] px-4 py-2 hover:bg-[#C0A080] rounded-lg;
+  @apply bg-[#C0A080] border-solid border-4 border-[#EEA977] text-white px-4 py-2 hover:bg-[#9C715F] rounded-full drop-shadow-2xl;
 }
 
 .location-list {
-  @apply space-y-10 relative my-5 w-4/5 overflow-y-auto;
+  @apply space-y-10 relative mt-5 px-2 w-full overflow-y-auto border-t-2 border-[#C0A080];
 }
 
 .location-item {
@@ -58,4 +58,16 @@
 
 .bird-view-text {
   @apply text-white;
+}
+
+.midSectionTextRating {
+  @apply text-white;
+}
+
+.midSectionTextHours {
+  @apply text-white;
+}
+
+.midSectionTextSO {
+  @apply text-[#7E7E7E];
 }
