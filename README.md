@@ -92,11 +92,8 @@ $ ./OKSEE-FullStack
     1. Run `jps` in any terminal
     2. Locate process ID (e.g `<PID> OkseeWebApplication`)
     3. Terminate process `kill <PID>`
-
-
 <!-- 
 TODO
-* Fetching all location Data from backend
-* Listing all data onto nav bar
-* Button Overlay Logic
-* update readme on starting up app - ./start.sh then open localhost://3000 front and localhost://8080/api/est for backend -->
+* Birds Eye View Modal
+* Creating the .env file and the contents required
+-->

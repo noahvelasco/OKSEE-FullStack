@@ -1,25 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faStarHalfStroke, faClock, faBellConcierge, faEye } from '@fortawesome/free-solid-svg-icons'
 
 
 const LocationItem = ({
     category,
-  title,
-  rating,
-  hours,
+    thumbnail,
+    title,
+    rating,
+    hours,
     lat,
-  lng,
-  address,
-  setSelectedLocName,
-  setSelectedLocCoords,
-  setSelectedLocRating,
-  setSelectedLocAdress,
-  serviceOptions,
-  thumbnail,
-  setModalVisible,
+    lng,
+    address,
+    modalVisibility,
+    setModalVisibility,
+    setSelectedLocName,
+    setSelectedLocLat,
+    setSelectedLocLng,
+    setSelectedLocRating,
+    setSelectedLocAddress,
+    serviceOptions,
 }) => {
   return (
       <div className='location-item'>
@@ -56,20 +59,29 @@ const LocationItem = ({
         </div>
 
         <button
-        className='bird-view-button'
-        // onPress={() => {
-        //     setModalVisible(true);
-        //     setSelectedLocName(title);
-        //     setSelectedLocCoords([lat, lng]);
-        //     setSelectedLocRating(rating);
-        //     setSelectedLocAdress(address);
-        // }}
+            className='bird-view-button'
+              onClick={() => {
+                  setModalVisibility((prevState) => !prevState);
+                  setSelectedLocName(title);
+                  setSelectedLocLat(lat);
+                  setSelectedLocLng(lng);
+                  setSelectedLocRating(rating);
+                  setSelectedLocAddress(address);
+                  console.log("MODAL VISIBILITY: ", modalVisibility)
+              }
+            }
         >
             <h1 className='bird-view-text'>
                 {"Bird's \t"}
                 <FontAwesomeIcon icon={faEye} />
             </h1>
-        </button>
+          </button>
+          
+
+          
+
+          
+
   
       
     </div>

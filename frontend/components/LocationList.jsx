@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import LocationItem from './LocationItem';
+import SelectedLocationModal from './SelectedLocationModal'
+
 
 const LocationItemMemo = React.memo(LocationItem);
 
@@ -29,11 +31,14 @@ const LocationList = ({
   }, [pressedPizza, pressedBurger, pressedCoffee, searchValue]);
 
   //used for 'birds eye view'
-  const [modalVisible, setModalVisible] = useState(false);
-  const [selectedLocCoords, setSelectedLocCoords] = useState([]);
+  const [modalVisibility, setModalVisibility] = useState(false);
   const [selectedLocName, setSelectedLocName] = useState("");
   const [selectedLocRating, setSelectedLocRating] = useState("");
   const [selectedLocAddress, setSelectedLocAddress] = useState("");
+
+
+  const [selectedLocLat, setSelectedLocLat] = useState(35.4676);
+  const [selectedLocLng, setSelectedLocLng] = useState(-97.5164);
 
   const setFiltersArray = useMemo(() => {
     return Object.keys(filters).filter((key) => filters[key] === true);
@@ -54,28 +59,46 @@ const LocationList = ({
             title={item.title}
             rating={item.rating}
             hours={item.hours}
-            coords={[item.latitude,item.longitude]}
+            
             address={item.address}
             serviceOptions={item.serviceOptions}
             thumbnail={item.thumbnail}
-            setSelectedLocCoords={setSelectedLocCoords}
+
+            setSelectedLocLat={setSelectedLocLat}
+            setSelectedLocLng={setSelectedLocLng}
+            lat={item.latitude}
+            lng={item.longitude}
+            
             setSelectedLocName={setSelectedLocName}
             setSelectedLocRating={setSelectedLocRating}
             setSelectedLocAddress={setSelectedLocAddress}
-            modalVisible={modalVisible}
-            setModalVisible={setModalVisible}
+            modalVisibility={modalVisibility}
+            setModalVisibility={setModalVisibility}
           />
         );
       }
       return null; // Ensure to return null if condition is not met
     },
-    [searchValue, setFiltersArray, modalVisible]
+    [searchValue, setFiltersArray, modalVisibility]
   );
 
   return (
     <div className='location-list'>
       {locations.map((item) => renderItem(item))}
+
+
+      
+        <SelectedLocationModal
+        title={selectedLocName}
+        rating={selectedLocRating}
+        address={selectedLocAddress}
+        coords={[selectedLocLat, selectedLocLng]}
+        modalVisibility={modalVisibility}
+        setModalVisibility={setModalVisibility}        
+/>
+
     </div>
+
   );
 };
 
