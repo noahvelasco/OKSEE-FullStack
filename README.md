@@ -28,8 +28,8 @@ OKSee is a modern and simple full stack web app showcasing the best parts of Okl
 ---
 ### Live Demo
 <p align =center>
-<a href="https://youtu.be/hGwb33RieqY" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg" alt="dart" width="40" height="40"/>
-<h3 align = center><a href = "https://youtu.be/hGwb33RieqY">Demo Link (Youtube)</a></h3>
+<a href="https://youtu.be/hGwb33RieqY?si=LlrL-RlK0M3lEeMM" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg" alt="dart" width="40" height="40"/>
+<h3 align = center><a href = "https://youtu.be/hGwb33RieqY?si=LlrL-RlK0M3lEeMM">Demo Link (Youtube)</a></h3>
 
 </p>
 
