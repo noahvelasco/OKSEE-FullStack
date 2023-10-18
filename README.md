@@ -2,7 +2,7 @@
 <img src="./images/logo_land.png" alt="Alternative text" title="App Splash Logo" height="250"/>
 </p>
 
-OKSee is a modern and simple full stack web app showcasing the best parts of Oklahoma City, Oklahoma. The main staple of this mobile app is the modern, sleek, and simple UI/UX. All images, color-schemes, and software engineering was done and maintained by Noah Velasco.
+OKSee is a modern and simple full stack web app showcasing the best parts of Oklahoma City, Oklahoma. The main staple of this mobile app is the attempt for a modern, sleek, and simple UI/UX. All images, color-schemes, and software engineering was done and maintained by Noah Velasco.
 
 <h3 align="center">Technologies Used</h3>
 <p align="center">
@@ -18,61 +18,49 @@ OKSee is a modern and simple full stack web app showcasing the best parts of Okl
 
 ---
 ### Preview
-TBA
- <!-- <p align="center">
-<img src=".\AppScreenshots\1.png" alt="" height="500"/>
-<img src=".\AppScreenshots\2.png" alt="" height="500"/>
-<img src=".\AppScreenshots\3.png" alt="" height="500"/>
-<img src=".\AppScreenshots\4.png" alt="" height="500"/>
-<img src=".\AppScreenshots\5.png" alt="" height="500"/>
-</p> -->
+
+ <p align="center">
+<img src=".\images\AppScreenshots\1.png" alt="" height="500"/>
+<img src=".\images\AppScreenshots\2.png" alt="" height="500"/>
+<img src=".\images\AppScreenshots\3.png" alt="" height="500"/>
+</p> 
 
 ---
 ### Live Demo
-TBA
-<!-- <p align =center>
-<a href="" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg" alt="dart" width="40" height="40"/>
-<h3 align = center><a href = "">Demo Link (Youtube)</a></h3> -->
+<p align =center>
+<a href="https://youtu.be/hGwb33RieqY" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg" alt="dart" width="40" height="40"/>
+<h3 align = center><a href = "https://youtu.be/hGwb33RieqY">Demo Link (Youtube)</a></h3>
 
 </p>
 
 ---
 ### Features / Todo's
 - [x] Branding
-- [ ] Landing Screen <=> Map Screen
-- [ ] Custom Google Map
-- [ ] Side Nav Bar (locations)
-- [ ] Animated Expanding Locations Button
-- [ ] Weather Forecast Overlay
-- [ ] Locations Overlay Button + Pins
-- [ ] Establishments list search bar
-- [ ] Establishments filter chips
-- [ ] Selected Location Birds Eye View
-- [ ] Comment cleanup
-- [ ] Documentation
+- [x] Landing Screen <=> Map Screen
+- [x] Custom Google Map
+- [x] Side Nav Bar (locations)
+- [x] Weather Forecast Overlay
+- [x] Locations Overlay Button + Pins
+- [x] Establishments list search bar
+- [x] Establishments filter chips
+- [x] Selected Location Birds Eye View
+- [x] Comment cleanup
+- [x] Documentation
 
 ---
 ### Running the application
 Prerequisites
 * Java 20 installed and configured
 * NodeJS installed
-
-<!-- 
-Then you need to open two terminals: terminal `A` and terminal `B`
-
-#### Starting backend on terminal A
-
+* Create a .env folder inside the `./frontend` folder and add the Google Maps API and the Open Weather Maps API keys
 ```
-$ ./OKSEE-FullStack/backend
-./mvnw spring-boot:run
+GOOGLE_MAPS_API_KEY=<YOUR GOOGLE MAPS API KEY>
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=<YOUR GOOGLE MAPS API KEY>
+OWM_API_KEY=<YOUR OPEN WEATHER MAP API KEY>
+NEXT_PUBLIC_OWM_API_KEY=<YOUR OPEN WEATHER MAP API KEY>
 ```
 
-#### Starting frontend terminal B
 
-```
-$ ./OKSEE-FullStack/frontend
-npm run dev
-``` -->
 1. Run `start.sh` script (initializes the backend and frontend)
 ```
 $ ./OKSEE-FullStack
@@ -92,8 +80,3 @@ $ ./OKSEE-FullStack
     1. Run `jps` in any terminal
     2. Locate process ID (e.g `<PID> OkseeWebApplication`)
     3. Terminate process `kill <PID>`
-<!-- 
-TODO
-* Birds Eye View Modal
-* Creating the .env file and the contents required
--->
