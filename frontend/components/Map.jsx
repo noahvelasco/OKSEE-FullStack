@@ -14,6 +14,7 @@ const Map = ({ locations, pressedPizza, pressedBurger, pressedCoffee }) => {
           <Marker
             key={item.id}
             index={index}
+            label={item.title}
             position={{ lat: item.latitude, lng: item.longitude }}
             icon={{
               url: "/assets/images/marker_pizza.png",
@@ -30,6 +31,7 @@ const Map = ({ locations, pressedPizza, pressedBurger, pressedCoffee }) => {
           <Marker
             key={item.id}
             index={index}
+            label={item.title}
             position={{ lat: item.latitude, lng: item.longitude }}
             icon={{
               url: "/assets/images/marker_burger.png",
