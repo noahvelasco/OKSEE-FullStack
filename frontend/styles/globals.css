@@ -37,7 +37,7 @@
 }
 
 .location-item {
-  @apply flex flex-col p-5 bg-[#444444]/[.95] border-4 border-[#C0A080] rounded rounded-xl;
+  @apply flex flex-col m-1 p-5 bg-[#444444]/[.95] border-4 border-[#C0A080] rounded rounded-xl;
 }
 
 .location-title-section {
@@ -73,11 +73,11 @@
 }
 
 .modal-container {
-  @apply fixed left-1/4 bottom-1/4 p-5 z-30 bg-black w-1/2 h-2/3 rounded rounded-3xl border-2 border-[#C0A080] text-center text-white;
+  @apply fixed left-1/4 top-20 p-5 z-30 bg-gradient-to-t from-[#171717] to-[#C0A080] w-1/2 h-3/4 rounded rounded-3xl border-2 border-[#C0A080] text-center text-white;
 }
 
 .modal-title {
-  @apply relative text-4xl z-40;
+  @apply relative text-4xl z-40 italic;
 }
 
 .modal-rating {
@@ -93,5 +93,5 @@
 }
 
 .modal-close-button {
-  @apply relative p-2 bg-[#C0A080] rounded-full z-40;
+  @apply relative mt-5 p-2 bg-[#C0A080] w-3/4 rounded-full z-40;
 }
